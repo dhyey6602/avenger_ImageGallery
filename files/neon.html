@@ -6,6 +6,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <style>
         body{
             background-color: black;
@@ -41,11 +42,27 @@
         .size-1of1 { width: 100%; }
         .size-1of2 { width: 50%; }
         .size-1of3 { width: 33.333%; }
+        .glow {
+        color: #fff;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e60073, 0 0 4px #e60073, 0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+        }
+        
+        to {
+            text-shadow: 0 0 2px #fff, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
+        }
+        }
         </style>
     </head>
     <body>
     <!--header navbar --> 
-        <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark navbar-fixed-top " style="background-color:black; padding-left: 5%;">
+        <nav class="navbar navbar-inverse navbar-expand-lg navbar-dark fixed-top " style="background-color:black; padding-left: 5%;">
             <a class="navbar-brand" href="#" style="padding-right:5%;">Avengers</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -54,13 +71,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="male.html">Male<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="male.html"></i>Male<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                         <a class="nav-link" href="female.html">Female<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                        <a class="nav-link" href="#"><b><u>Neon Version</u></b><span class="sr-only">(current)</span></a>
+                        <a class="nav-link glow" href="#"><b>Neon Version</b><span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul class="nav-item navbar-right">MARVEL</ul>
